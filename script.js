@@ -53,17 +53,29 @@ blockItem.addEventListener("mouseover", changeBackground);
 
 // CHANGE THE BLOCK CSS BACK AGAIN WHEN THE MOUSEOUT event is fired
 
-let testMouse = false;
-const orignalDivColor = blockItem.style.background;
+blockItem.addEventListener("mouseout", backgroudChangeBack);
 
 function changeBackground() {
-  if (testMouse === false) {
-    blockItem.style.background = "green";
-    blockItem.style.border = "10px solid black";
-    testMouse = true;
-  } else {
-    blockItem.style.background = "brown";
-    blockItem.style.border = "none";
-    testMouse = false;
-  }
+  blockItem.style.background = "green";
+  blockItem.style.border = "10px solid black";
 }
+
+function backgroudChangeBack() {
+  blockItem.style.background = "brown";
+  blockItem.style.border = "none";
+}
+
+// let testMouse = false;
+// const orignalDivColor = blockItem.style.background;
+
+// function changeBackground() {
+//   if (testMouse === false) {
+//     blockItem.style.background = "green";
+//     blockItem.style.border = "10px solid black";
+//     testMouse = true;
+//   } else {
+//     blockItem.style.background = "brown";
+//     blockItem.style.border = "none";
+//     testMouse = false;
+//   }
+// }
